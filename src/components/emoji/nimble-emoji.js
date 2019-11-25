@@ -166,13 +166,8 @@ const NimbleEmoji = (props) => {
         width: props.size,
         height: props.size,
         display: 'inline-block',
-        backgroundImage: `url(${props.backgroundImageFn(
-          props.set,
-          props.sheetSize,
-        )})`,
-        backgroundSize: `${100 * props.sheetColumns}% ${100 *
-          props.sheetRows}%`,
-        backgroundPosition: _getPosition(props),
+        backgroundImage: 'url(' + props.data.emojis[props.key || props.emoji].imagePath + ')',
+        backgroundSize: 'cover',
       }
     }
   }
